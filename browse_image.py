@@ -24,20 +24,5 @@ def myBrowse():
 	#label2.grid(column=0, row=2)
 	canvas.create_image(0,0,image=photo,anchor="nw")
 	canvas.config(scrollregion=canvas.bbox(ALL))
-	def printcoords(event):
-		global x,y,label6
-		#outputting x and y coords to console
-		x = event.x
-		y = event.y
-		# tt = canvas.create_text(30, 480, anchor=E, font="Purisa",
-			# text=str(x)+","+str(y))
-		label6 = Label(root,text = "           ")
-		label6.image = "       "
-		label6.grid(column=0, row=10)
-		label6.destroy()
-		label6 = Label(root,text = str(x)+","+str(y))
-		label6.image = str(x)+str(y)
-		label6.grid(column=0, row=10)
-	#mouseclick event
-	canvas.bind("<Button>",printcoords)
+	
 	
